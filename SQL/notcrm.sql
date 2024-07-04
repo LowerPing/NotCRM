@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 04, 2024 at 11:01 AM
+-- Generation Time: Jul 04, 2024 at 08:48 PM
 -- Server version: 8.0.17
 -- PHP Version: 7.3.10
 
@@ -21,6 +21,80 @@ SET time_zone = "+00:00";
 --
 -- Database: `notcrm`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gasdetectors`
+--
+
+CREATE TABLE `gasdetectors` (
+  `id` int(11) NOT NULL,
+  `gas_name` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
+  `sensor_type` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
+  `lel_percentage` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+--
+-- Dumping data for table `gasdetectors`
+--
+
+INSERT INTO `gasdetectors` (`id`, `gas_name`, `sensor_type`, `lel_percentage`) VALUES
+(1, 'Karbon Monoksit (CO)', 'Elektrokimyasal Sensör', 'Yok'),
+(2, 'Hidrojen Sülfür (H2S)', 'Elektrokimyasal Sensör', '4'),
+(3, 'Metan (CH4)', 'Katalitik Sensör, Infrared Sensör (IR)', '5'),
+(4, 'Amonyak (NH3)', 'Elektrokimyasal Sensör, Metal Oksit Yarı İletken (MOS) Sensör', '15'),
+(5, 'Oksijen (O2)', 'Elektrokimyasal Sensör', 'Yok'),
+(6, 'Klor (Cl2)', 'Elektrokimyasal Sensör', 'Yok'),
+(7, 'Bütan (C4H10)', 'Katalitik Sensör, Infrared Sensör (IR)', '1.8'),
+(8, 'Propilen (C3H6)', 'Katalitik Sensör, Infrared Sensör (IR)', '2'),
+(9, 'Argon (Ar)', 'Termal İletkenlik Sensörleri (TCD), Kütle Akış Sensörleri', 'Yok'),
+(10, 'Hidrojen (H2)', 'Katalitik Sensör, Infrared Sensör (IR)', '4'),
+(11, 'Asetilen (C2H2)', 'Katalitik Sensör, Infrared Sensör (IR)', '2.5'),
+(12, 'Propane (C3H8)', 'Katalitik Sensör, Infrared Sensör (IR)', '2.1'),
+(13, 'Heptane (C7H16)', 'Katalitik Sensör, Infrared Sensör (IR)', '1.05'),
+(14, 'Hexane (C6H14)', 'Katalitik Sensör, Infrared Sensör (IR)', '1.2'),
+(15, 'Etilen (C2H4)', 'Katalitik Sensör, Infrared Sensör (IR)', '2.7'),
+(16, 'Benzen (C6H6)', 'Katalitik Sensör, Infrared Sensör (IR)', '1.2'),
+(17, 'Hidrojen Siyanür (HCN)', 'Elektrokimyasal Sensör', '5.6'),
+(18, 'Karbondioksit (CO2)', 'Infrared Sensör (IR)', 'Yok'),
+(19, 'Nitrojen Dioksit (NO2)', 'Elektrokimyasal Sensör', 'Yok'),
+(20, 'Formaldehit (CH2O)', 'Elektrokimyasal Sensör', 'Yok'),
+(21, 'Fosfin (PH3)', 'Elektrokimyasal Sensör', '1.8'),
+(22, 'Ozon (O3)', 'Elektrokimyasal Sensör', 'Yok'),
+(23, 'Metanol (CH3OH)', 'Katalitik Sensör, Infrared Sensör (IR)', '6'),
+(24, 'Etil Alkol (C2H5OH)', 'Katalitik Sensör, Infrared Sensör (IR)', '3.3'),
+(25, 'İzopropanol (C3H8O)', 'Katalitik Sensör, Infrared Sensör (IR)', '2.0'),
+(26, 'Kükürt Dioksit (SO2)', 'Elektrokimyasal Sensör', 'Yok'),
+(27, 'Metil Klorid (CH3Cl)', 'Elektrokimyasal Sensör', '10.7'),
+(28, 'Metil Etil Keton (MEK)', 'Katalitik Sensör, Infrared Sensör (IR)', '1.4'),
+(29, 'Metil Isobutil Keton (MIBK)', 'Katalitik Sensör, Infrared Sensör (IR)', '1.2'),
+(30, 'Etan (C2H6)', 'Katalitik Sensör, Infrared Sensör (IR)', '3'),
+(31, 'Aseton (C3H6O)', 'Katalitik Sensör, Infrared Sensör (IR)', '2.6'),
+(32, 'Styrene (C8H8)', 'Katalitik Sensör, Infrared Sensör (IR)', '1.1'),
+(33, 'Vinyl Chloride (C2H3Cl)', 'Katalitik Sensör, Infrared Sensör (IR)', '3.8'),
+(34, 'Akrilonitril (C3H3N)', 'Katalitik Sensör, Infrared Sensör (IR)', '3'),
+(35, 'Ammonium (NH4+)', 'Elektrokimyasal Sensör', 'Yok'),
+(36, 'Benzin Buharı', 'Katalitik Sensör, Infrared Sensör (IR)', '1.4'),
+(37, 'Helyum (He)', 'Termal İletkenlik Sensörleri (TCD)', 'Yok'),
+(38, 'Silane (SiH4)', 'Katalitik Sensör', '1.5'),
+(39, 'Fosgen (COCl2)', 'Elektrokimyasal Sensör', 'Yok'),
+(40, 'Diklorometan (CH2Cl2)', 'Infrared Sensör (IR)', 'Yok'),
+(41, 'Furan (C4H4O)', 'Katalitik Sensör', '2.3'),
+(42, 'Diboran (B2H6)', 'Elektrokimyasal Sensör', '1.9'),
+(43, 'Dimetil Eter (DME)', 'Katalitik Sensör', '3.4'),
+(44, 'Hexamethylene Diisocyanate (HDI)', 'Elektrokimyasal Sensör', 'Yok'),
+(45, 'İzobütan (i-C4H10)', 'Katalitik Sensör, Infrared Sensör (IR)', '1.8'),
+(46, 'İzopren (C5H8)', 'Katalitik Sensör', '1.4'),
+(47, 'Klor Dioksit (ClO2)', 'Elektrokimyasal Sensör', 'Yok'),
+(48, 'Ksilol (C8H10)', 'Katalitik Sensör, Infrared Sensör (IR)', '1.1'),
+(49, 'Neon (Ne)', 'Termal İletkenlik Sensörleri (TCD)', 'Yok'),
+(50, 'Nitrojen (N2)', 'Termal İletkenlik Sensörleri (TCD)', 'Yok'),
+(51, 'Perchloroethylene (C2Cl4)', 'Infrared Sensör (IR)', 'Yok'),
+(52, 'Propanal (C3H6O)', 'Katalitik Sensör', '2.5'),
+(53, 'Siklopentan (C5H10)', 'Katalitik Sensör, Infrared Sensör (IR)', '1.4'),
+(54, 'Vinil Asetat (C4H6O2)', 'Katalitik Sensör, Infrared Sensör (IR)', '2.6'),
+(55, 'Argon (Ar)', 'Termal İletkenlik Sensörleri (TCD), Kütle Akış Sensörleri', 'Yok');
 
 -- --------------------------------------------------------
 
@@ -122,6 +196,12 @@ CREATE TABLE `product` (
 --
 
 --
+-- Indexes for table `gasdetectors`
+--
+ALTER TABLE `gasdetectors`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `kullanici`
 --
 ALTER TABLE `kullanici`
@@ -148,6 +228,12 @@ ALTER TABLE `product`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `gasdetectors`
+--
+ALTER TABLE `gasdetectors`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `kullanici`

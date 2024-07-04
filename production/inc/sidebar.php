@@ -17,7 +17,7 @@
                             <img src="images/img.jpg" alt="..." class="img-circle profile_img">
                         </div>
                         <div class="profile_info">
-                            
+
                             <span>Hoşgeldin</span>
 
                             <br>
@@ -49,6 +49,7 @@
                                             class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="index.php">Anasayfa</a></li>
+                                        <li><a href="../production/gaspercentage.php">Gaz Ve Değerleri</a></li>
                                         <!--   <li><a href="../production/allcompany.php">Tüm Firmalar</a></li>
                                         <li><a href="../production/addcompany.php">Firma Ekle</a></li> -->
                                         <!-- <li><a href="../production/products.php">Ürünler</a></li> -->
